@@ -6,10 +6,10 @@ VALUES
 INSERT INTO burgers
     (burger_name, devoured)
 VALUES
-    ("double shack burger", FALSE);
+    ("double shack burger", true);
 
 INSERT INTO burgers
     (burger_name, devoured)
 VALUES
-    ("spicy chicken sandwich", FALSE);
+    ("spicy chicken sandwich", true);
 
