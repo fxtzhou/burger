@@ -1,16 +1,16 @@
-<li class="list-group-item ">
-    {{#if devoured}}
-<li class="list-group-item disabled">{{burger_name}}</li>
+{{#if devoured}}
+<li class="list-group-item disabled">{{burger_name}} <button type="button" class="btn btn-secondary" data-id=" {{id}}"
+        type="none">
+        ALREADY EATEN</button></li>
 
-<button type="button" class="btn btn-secondary" data-id=" {{id}}" type="none">
-    ALREADY EATEN</button>
+
 {{else}}
-{{burger_name}}
-<form action="/api/burgers/{{id}}?_method=PUT" method="POST">
-    <button type="button" class="btn btn-warning" data-id=" {{id}}" type="submit">
-        CONSUME
-    </button>
-</form>
-{{/if}}
-
+<li class="list-group-item">{{burger_name}}
+    <form action="/api/burgers/{{id}}?_method=PUT" method="POST">
+        <button type="button" class="btn btn-warning" data-id=" {{id}}" type="submit">
+            CONSUME
+        </button>
+    </form>
 </li>
+
+{{/if}}
