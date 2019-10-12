@@ -27,29 +27,33 @@
     <div class="row mb-5">
 
 
-        <div class="col ">
+        <div class="col">
 
 
             <h5>Consume?</h5>
             <ul class="list-group">
+
                 {{#each burgers}}
                 {{#unless this.devoured}}
                 {{> burgers/burger-block devoured=false}}
                 {{/unless}}
                 {{/each}}
+
             </ul>
         </div>
-
         <div class="col">
 
             <h5>Consumed!</h5>
 
             <ul class="list-group">
+
                 {{#each burgers}}
                 {{#if this.devoured}}
                 {{> burgers/burger-block devoured=true}}
                 {{/if}}
+
                 {{/each}}
+
             </ul>
         </div>
     </div>
